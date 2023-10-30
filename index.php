@@ -1,4 +1,5 @@
 <?php
+    require('includes/envoyer_email.php');
     include('includes/header.php');
 ?>
     <section class="intro">
@@ -8,7 +9,7 @@
     <section class="contact">
         <h2>Contactez-moi</h2>
         <p>N'hésitez pas à me contacter en utilisant le formulaire ci-dessous. Votre message sera directement envoyé à mon adresse e-mail.</p>
-        <form action="envoyer_email.php" method="post">
+        <form action="includes/envoyer_email.php" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
 
@@ -20,6 +21,7 @@
 
             <button type="submit">Envoyer</button>
         </form>
+
     </section>
 <?php
     include('includes/footer.php');
