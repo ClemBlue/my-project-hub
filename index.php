@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mon Site Hub</title>
-</head>
-<body>
-    <header>
-        <h1>Bienvenue sur Mon Site Hub</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="cv.php">CV</a></li>
-            <li><a href="">Mes réalisations</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>À Propos de Moi</h2>
-            <p>Je m'appelle [Votre Nom]. Voici quelques-unes de mes passions :</p>
+<?php
+    include('includes/header.php');
+?>
+    <section class="intro">
+        <p>Je m'appelle Clément et je suis passionné par la création de sites web. Sur ce site, vous trouverez mon CV ainsi que plusieurs projets sur lesquels j'ai travaillé ou sur lesquels je travaille actuellement. J'aime utiliser diverses technologies pour diversifier mes compétences.</p>
+    </section>
 
-            <div class="passion-block">
-                <h3>Jeux Vidéo</h3>
-                <p>J'aime les jeux vidéo parce que [expliquez pourquoi vous les aimez, par exemple : "ils me permettent de m'évader dans des mondes fantastiques"].</p>
-            </div>
+    <section class="contact">
+        <h2>Contactez-moi</h2>
+        <p>N'hésitez pas à me contacter en utilisant le formulaire ci-dessous. Votre message sera directement envoyé à mon adresse e-mail.</p>
+        <form action="envoyer_email.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
 
-            <div class="passion-block">
-                <h3>Manga</h3>
-                <p>J'aime les mangas parce que [expliquez pourquoi vous les aimez, par exemple : "je trouve les histoires captivantes et les dessins incroyables"].</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Mon Site Hub. Tous droits réservés.</p>
-    </footer>
-</body>
-</html>
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+<?php
+    include('includes/footer.php');
+?>
+
