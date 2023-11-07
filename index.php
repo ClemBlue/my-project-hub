@@ -3,7 +3,7 @@
     include('includes/header.php');
 
     $miniSites = [
-        ['nom' => 'Mini-Site 1', 'description' => 'Description du mini-site 1', 'lien' => 'lien_vers_mini_site_1', 'image' => 'lien de l\'image'],
+        ['nom' => 'L\'univers de Fate', 'description' => 'Je vous présente ici l\'univers de Fate, un univers que j\'afféctionne particulièrement', 'lien' => '', 'image' => 'lien de l\'image'],
         ['nom' => 'Mini-Site 2', 'description' => 'Description du mini-site 2', 'lien' => 'lien_vers_mini_site_2', 'image' => 'lien de l\'image'],
     ];
     
@@ -16,11 +16,11 @@
     <section>
         <ul>
             <?php foreach ($miniSites as $miniSite) : ?>
-                <li alt="<?php echo $miniSite['image'] ?>">
-                    <a href="<?php echo $miniSite['lien']; ?>">
-                        <h2><?php echo $miniSite['nom']; ?></h2>
+                <li alt="<?php print $miniSite['image'] ?>">
+                    <a href="<?php print $miniSite['lien']; ?>">
+                        <h2><?php print $miniSite['nom']; ?></h2>
                     </a>
-                    <p><?php echo $miniSite['description']; ?></p>
+                    <p><?php print $miniSite['description']; ?></p>
                 </li>
             <?php endforeach; ?>
         </ul>
