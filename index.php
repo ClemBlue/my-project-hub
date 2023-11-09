@@ -3,8 +3,9 @@
     include('includes/header.php');
 
     $miniSites = [
-        ['nom' => 'L\'univers de Fate', 'description' => 'Je vous présente ici l\'univers de Fate, un univers que j\'afféctionne particulièrement', 'lien' => '', 'image' => 'lien de l\'image'],
-        ['nom' => 'Mini-Site 2', 'description' => 'Description du mini-site 2', 'lien' => 'lien_vers_mini_site_2', 'image' => 'lien de l\'image'],
+        ['nom' => 'Fate/', 'description' => 'Je vous présente ici l\'univers de Fate, un univers que j\'afféctionne particulièrement', 'lien' => '', 'image' => 'images/fate.png'],
+        ['nom' => 'Genshin Impact', 'description' => 'Voici l\'univers de Genshin Impact', 'lien' => 'lien_vers_mini_site_2', 'image' => 'images/genshin.jpg'],
+        ['nom' => 'Nier Automata', 'description' => 'Nier Automata, un jeu de Square Enix', 'lien' => '', 'image' => 'images/nier.png'],
     ];
     
 
@@ -13,18 +14,20 @@
         <p>Je m'appelle Clément et je suis passionné par la création de sites web. Sur ce site, vous trouverez mon CV ainsi que plusieurs projets sur lesquels j'ai travaillé ou sur lesquels je travaille actuellement. J'aime utiliser diverses technologies pour diversifier mes compétences.</p>
     </section>
 
-    <section>
-        <ul>
-            <?php foreach ($miniSites as $miniSite) : ?>
-                <li alt="<?php print $miniSite['image'] ?>">
-                    <a href="<?php print $miniSite['lien']; ?>">
-                        <h2><?php print $miniSite['nom']; ?></h2>
-                    </a>
-                    <p><?php print $miniSite['description']; ?></p>
-                </li>
+    <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+        <?php foreach ($miniSites as $key => $miniSite) : ?>
+            <div class="carousel-item <?= ($key === 0) ? 'active' : ''; ?>">
+                <a href="<?= $miniSite['lien']; ?>" target="_blank"><img src="<?= $miniSite['image']; ?>" class="d-block w-100" alt="<?= $miniSite['nom']; ?>">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><?= $miniSite['nom']; ?></h5>
+                    <p><?= $miniSite['description']; ?></p>
+                </div>
+                </a>
+            </div>
             <?php endforeach; ?>
-        </ul>
-    </section>
+        </div>
+    </div>
 
     <section class="contact">
         <h2>Contactez-moi</h2>
