@@ -11,10 +11,11 @@
 
 ?>
     <section class="intro">
+        <h2>Bienvenu sur mon site !</h2>
         <p>Je m'appelle Clément et je suis passionné par la création de sites web. Sur ce site, vous trouverez mon CV ainsi que plusieurs projets sur lesquels j'ai travaillé ou sur lesquels je travaille actuellement. J'aime utiliser diverses technologies pour diversifier mes compétences.</p>
     </section>
 
-    <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" >
         <div class="carousel-inner">
         <?php foreach ($miniSites as $key => $miniSite) : ?>
             <div class="carousel-item <?= ($key === 0) ? 'active' : ''; ?>">

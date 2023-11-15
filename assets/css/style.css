@@ -58,10 +58,14 @@ table {
 
 /* Header */
 header {
-    margin: 1rem 2rem;
+    margin: 1.5rem 3rem 0 3rem;
 }
 header nav.navbar .container-fluid a, header nav.navbar div ul li a.nav-link.active, .navbar-nav .nav-link.show{
     color: var(--main-text-color);
+    font-size: 1.3rem;
+}
+header nav.navbar .container-fluid .navbar-brand{
+    font-size: 1.5rem;
 }
 .dropdown-menu {
     background-color: var(--main-bg-color);
@@ -75,18 +79,27 @@ header nav.navbar .container-fluid a, header nav.navbar div ul li a.nav-link.act
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    font-family: 'RocknRoll One', sans-serif;
 }
 section {
-    margin: 1rem 2rem;
+    margin: 1.5rem 3rem;
 }
 
+.intro {
+    text-align: center;
+}
+.intro h2{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+.intro p{
+    font-size: 1.2rem;
+}
 /* Carousel */
 .carousel-item img {
-    height: 200px;
+    height: 20rem;
     object-fit: cover; /* Pour maintenir le rapport hauteur/largeur */
 }
-
-
 
 /* Footer */
 footer {
