@@ -9,8 +9,10 @@ $experience_data = getExperiencesProByCvId($pdo, $cv_id);
 $competence_data = getCompenteceByCvId($pdo, $cv_id);
 ?>
 
-<h2>Qui suis je ?</h2>
-<p>Vous trouverez ici mon CV</p>
+<section>
+    <h2>Qui suis je ?</h2>
+    <p>Vous trouverez ici mon CV</p>
+</section>
 
 <section class="info">
     <p><?php print($cv_data['nom'] . ' ' . $cv_data['prenom']); ?></p>

@@ -47,12 +47,35 @@ table {
 	border-spacing: 0;
 }
 
+/****** PERSO ******/
+
+:root {
+    --main-bg-color: #003459;
+    --main-text-color: #FFFFFF;
+    --main-hover-color: #007EA7;
+    --main-link-color: #00A8E8;
+}
+
 /* Header */
 header {
     margin: 1rem 2rem;
 }
+header nav.navbar .container-fluid a, header nav.navbar div ul li a.nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--main-text-color);
+}
+.dropdown-menu {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+.dropdown-divider {
+    background-color: var(--main-text-color);
+}
 
 /* Body */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
 section {
     margin: 1rem 2rem;
 }
